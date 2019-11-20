@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private double height2 = 0.0;
     private int correctAnswers;
     private String correctAnswer;
-    private int guessRows;
+    private int guessRows=2;
     private int totalGuesses;
     private SecureRandom random; // used to randomize the quiz
     private Handler handler;
@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             // loop through each region
 
-            String[] paths = assets.list("Africa");
+            String[] paths = assets.list("Asia");
 
             for (String path : paths)
                 fileNameList.add(path.replace(".png", ""));
@@ -468,18 +468,47 @@ public class MainActivity extends AppCompatActivity {
             String answer = getFoodName(correctAnswer);
             ++totalGuesses; // increment number of guesses the user has made
 
-            if (guess.equals(answer)) { // if the guess is correct
-                ++correctAnswers; // increment the number of correct answers
+            // if the user has correctly identified FLAGS_IN_QUIZ flags
+            if (correctAnswers == FLAGS_IN_QUIZ) {
+                // DialogFragment to display quiz stats and start new quiz
+                DialogFragment quizResults =
+                        new DialogFragment() {
+                            // create an AlertDialog and return it
+                            @Override
+                            public Dialog onCreateDialog(Bundle bundle) {
+                                AlertDialog.Builder builder =
+                                        new AlertDialog.Builder(getActivity());
+                                builder.setMessage(
+                                        getString(R.string.results,
+                                                totalGuesses,
+                                                (1000 / (double) totalGuesses)));
 
-                // display correct answer in green text
-                answerTextView.setText(answer + "!");
+                                // "Reset Quiz" Button
+                                builder.setPositiveButton(R.string.reset_quiz,
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog,
+                                                                int id) {
+                                                resetQuiz();
+                                            }
+                                        }
+                                );
 
-               disableButtons(); // disable all guess Buttons
+                                return builder.create(); // return the AlertDialog
+                            }
+                        };
 
+                // use FragmentManager to display the DialogFragment
+                quizResults.setCancelable(false);
+                //quizResults.show(getFragmentManager(), "quiz results");
+            } else { // answer was incorrect
+
+                // display "Incorrect!" in red
+                answerTextView.setText(R.string.incorrect_answer);
+                guessButton.setEnabled(false); // disable incorrect answer
             }
-
         }
     };
+
     private void calculateMiffin() {
         if(rb2.isChecked()) {
             miffinGender = 5;
