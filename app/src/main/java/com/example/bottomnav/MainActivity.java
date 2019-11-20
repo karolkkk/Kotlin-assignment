@@ -3,6 +3,7 @@ package com.example.bottomnav;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                     bmi.setVisibility(View.INVISIBLE);
                     Mifflin.setVisibility(View.INVISIBLE);
                     Quiz.setVisibility(View.VISIBLE);
-                        loadNextFlag();
+                        resetQuiz();
                     return true;
             }
             return false;
@@ -188,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
     public void resetQuiz() {
         // use AssetManager to get image file names for enabled regions
         AssetManager assets = getAssets();
@@ -195,13 +197,12 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             // loop through each region
-            for (String region : regionsSet) {
-                // get a list of all flag image files in this region
-                String[] paths = assets.list(region);
 
-                for (String path : paths)
-                    fileNameList.add(path.replace(".png", ""));
-            }
+            String[] paths = assets.list("Africa");
+
+            for (String path : paths)
+                fileNameList.add(path.replace(".png", ""));
+
         }
         catch (IOException exception) {
             Log.e(TAG, "Error loading image file names", exception);
@@ -473,8 +474,7 @@ public class MainActivity extends AppCompatActivity {
                 // display correct answer in green text
                 answerTextView.setText(answer + "!");
 
-                disableButtons(); // disable all guess Buttons
-
+               disableButtons(); // disable all guess Buttons
 
             }
 
