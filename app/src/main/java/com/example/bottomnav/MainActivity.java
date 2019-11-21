@@ -19,6 +19,8 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -67,19 +69,21 @@ public class MainActivity extends AppCompatActivity {
     private TextView categoryTextView;
     private TextView caloriesTextView;
     private ConstraintLayout bmi;
+    private ConstraintLayout Reset;
     private ConstraintLayout Mifflin;
     private ConstraintLayout welcome;
+    private ConstraintLayout chart_layout;
     private ConstraintLayout Quiz;
     private RadioButton rb1;
     private RadioButton rb2;
+    private Button resetBtn;
     private ImageView Img;
     private ImageView imageViewQuiz;
     private static final int FLAGS_IN_QUIZ = 5;
-    private Animation shakeAnimation;
     private LinearLayout[] guessLinearLayouts;
     private TextView answerTextView;
     private static final String TAG = "MyActivity";
-    private Set<String> regionsSet;
+
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -94,29 +98,40 @@ public class MainActivity extends AppCompatActivity {
                     bmi.setVisibility(View.INVISIBLE);
                     Mifflin.setVisibility(View.INVISIBLE);
                     Quiz.setVisibility(View.INVISIBLE);
+                    chart_layout.setVisibility(View.INVISIBLE);
                     return true;
                 case R.id.navigation_bmi:
-                    mTextMessage.setText("BMI");
+                    mTextMessage.setText(R.string.bmi);
                     welcome.setVisibility(View.INVISIBLE);
                     bmi.setVisibility(View.VISIBLE);
                     Mifflin.setVisibility(View.INVISIBLE);
                     Quiz.setVisibility(View.INVISIBLE);
+                    chart_layout.setVisibility(View.INVISIBLE);
                     return true;
                 case R.id.navigation_miffin:
-                    mTextMessage.setText("Miffin");
+                    mTextMessage.setText(R.string.Miffin);
                     welcome.setVisibility(View.INVISIBLE);
                     bmi.setVisibility(View.INVISIBLE);
                     Mifflin.setVisibility(View.VISIBLE);
                     Quiz.setVisibility(View.INVISIBLE);
+                    chart_layout.setVisibility(View.INVISIBLE);
                     return true;
                     case R.id.navigation_Quiz:
-                    mTextMessage.setText("Quiz");
+                    mTextMessage.setText(R.string.Quiz);
                     welcome.setVisibility(View.INVISIBLE);
                     bmi.setVisibility(View.INVISIBLE);
                     Mifflin.setVisibility(View.INVISIBLE);
                     Quiz.setVisibility(View.VISIBLE);
+                        chart_layout.setVisibility(View.INVISIBLE);
                         resetQuiz();
                     return true;
+                case R.id.navigation_chart:
+                    mTextMessage.setText(R.string.title_chart);
+                    welcome.setVisibility(View.INVISIBLE);
+                    bmi.setVisibility(View.INVISIBLE);
+                    Mifflin.setVisibility(View.INVISIBLE);
+                    Quiz.setVisibility(View.INVISIBLE);
+                    chart_layout.setVisibility(View.VISIBLE);
             }
             return false;
         }
@@ -135,13 +150,15 @@ public class MainActivity extends AppCompatActivity {
         weightTextView= (TextView) findViewById(R.id.weightTextView);
         caloriesTextView = (TextView) findViewById(R.id.calories);
         questionNumberTextView =  (TextView) findViewById(R.id.questionNumberTextView);
-
+        chart_layout = (ConstraintLayout) findViewById(R.id.chart_layout);
         bmiTextView = (TextView) findViewById(R.id.bmiTextView);
         categoryTextView = (TextView) findViewById(R.id.categoryTextView);
         welcome = (ConstraintLayout) findViewById(R.id.welcome);
         bmi = (ConstraintLayout) findViewById(R.id.bmi);
         Mifflin = (ConstraintLayout) findViewById(R.id.Mifflin);
         Quiz = findViewById(R.id.Quiz);
+        Reset= findViewById(R.id.Reset);
+        Reset.setVisibility(View.INVISIBLE);
         Quiz.setVisibility(View.INVISIBLE);
         welcome.setVisibility(View.VISIBLE);
         bmi.setVisibility(View.INVISIBLE);
@@ -159,6 +176,8 @@ public class MainActivity extends AppCompatActivity {
         Age.addTextChangedListener(AgeTextWatcher);
         rb1 = (RadioButton) findViewById(R.id.radiofemale);
         rb2 = (RadioButton) findViewById(R.id.radioMale);
+        resetBtn= findViewById(R.id.resetBtn);
+        WebView myWebView = (WebView) findViewById(R.id.webview);
         Img = (ImageView) findViewById(R.id.imageView);
         Img.setVisibility(View.INVISIBLE);
         fileNameList = new ArrayList<>();
@@ -168,9 +187,7 @@ public class MainActivity extends AppCompatActivity {
         AssetManager assets = getAssets();
         questionNumberTextView.setText(
                 getString(R.string.question, 1, FLAGS_IN_QUIZ));
-        /*shakeAnimation = AnimationUtils.loadAnimation(getActivity(),
-                R.anim.incorrect_shake);
-        shakeAnimation.setRepeatCount(3);*/
+
 // get references to GUI components
         imageViewQuiz = (ImageView) findViewById(R.id.imageViewQuiz);
         guessLinearLayouts = new LinearLayout[2];
@@ -180,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
                 (LinearLayout) findViewById(R.id.row2LinearLayout);
 
         answerTextView = (TextView) findViewById(R.id.answerTextView);
+        resetBtn.setOnClickListener(ResetListener);
 
         for (LinearLayout row : guessLinearLayouts) {
             for (int column = 0; column < row.getChildCount(); column++) {
@@ -187,6 +205,46 @@ public class MainActivity extends AppCompatActivity {
                 button.setOnClickListener(guessButtonListener);
             }
         }
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        //Example based on the
+        //https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery/piechart.html
+        String htmlData = "<html>"
+                +"  <head>"
+                +"    <script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>"
+                +"    <script type=\"text/javascript\">"
+                +"      google.charts.load('current', {'packages':['corechart']});"
+                +"      google.charts.setOnLoadCallback(drawChart);"
+
+                +"      function drawChart() {"
+
+                +"        var data = google.visualization.arrayToDataTable(["
+                +"          ['Age', 'Sleep(h)'],"
+                +"          ['0-3 months)',  15],"
+                +"          ['1-2yrs',  13],"
+                +"          ['3-5yrs',  12],"
+                +"          ['6-13', 10],"
+                +"          ['14-17',  9]"
+                +"        ]);"
+
+                +"        var options = {"
+                +"          title: 'Sleep needed by age chart',"
+                +"          curveType: 'function',"
+                +"          legend: { position: 'bottom' }"
+                +"        };"
+
+                +"        var chart = new google.visualization.LineChart(document.getElementById('chart'));"
+
+                +"        chart.draw(data, options);"
+                +"      }"
+                +"    </script>"
+                +"  </head>"
+                +"  <body>"
+                +"    <div id=\"chart\" style=\"width: 500px; height: 500px;\"></div>"
+                +"  </body>"
+                +"</html>";
+        myWebView.loadData(htmlData, "text/html", "UTF-8");
 
     }
 
@@ -198,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             // loop through each region
 
-            String[] paths = assets.list("Asia");
+            String[] paths = assets.list("X");
 
             for (String path : paths)
                 fileNameList.add(path.replace(".png", ""));
@@ -233,65 +291,72 @@ public class MainActivity extends AppCompatActivity {
     }
     private void loadNextFlag() {
         // get file name of the next flag and remove it from the list
-        String nextImage = quizCountriesList.remove(0);
-        correctAnswer = nextImage; // update the correct answer
-        answerTextView.setText(""); // clear answerTextView
+        //System.out.println(quizCountriesList);
+        System.out.println(quizCountriesList.size());
+        if(quizCountriesList.size()==0){
+Quiz.setVisibility(View.INVISIBLE);
+Reset.setVisibility(View.VISIBLE);
 
-        // display current question number
-        questionNumberTextView.setText(getString(
-                R.string.question, (correctAnswers + 1), FLAGS_IN_QUIZ));
+        }else {
+            String nextImage = quizCountriesList.remove(0);
+            correctAnswer = nextImage; // update the correct answer
+            answerTextView.setText(""); // clear answerTextView
 
-        // extract the region from the next image's name
-        String region = nextImage.substring(0, nextImage.indexOf('-'));
+            // display current question number
+            questionNumberTextView.setText(getString(
+                    R.string.question, (correctAnswers + 1), FLAGS_IN_QUIZ));
 
-        // use AssetManager to load next image from assets folder
-        AssetManager assets = getAssets();
-        System.out.println(getAssets());
+            // extract the region from the next image's name
+            String region = nextImage.substring(0, nextImage.indexOf('-'));
 
-        // get an InputStream to the asset representing the next flag
-        // and try to use the InputStream
-        try (InputStream stream =
-                     assets.open(region + "/" + nextImage + ".png")) {
-            // load the asset as a Drawable and display on the flagImageView
-            Drawable flag = Drawable.createFromStream(stream, nextImage);
-            imageViewQuiz.setImageDrawable(flag);
+            // use AssetManager to load next image from assets folder
+            AssetManager assets = this.getAssets();
+            System.out.println(assets);
 
-            //animate(false); // animate the flag onto the screen
-        }
-        catch (IOException exception) {
-            Log.e(TAG, "Error loading " + nextImage, exception);
+            // get an InputStream to the asset representing the next flag
+            // and try to use the InputStream
+            try (InputStream stream =
+                         assets.open(region + "/" + nextImage + ".png")) {
+                // load the asset as a Drawable and display on the flagImageView
+                Drawable flag = Drawable.createFromStream(stream, nextImage);
+                imageViewQuiz.setImageDrawable(flag);
 
-        }
+                //animate(false); // animate the flag onto the screen
+            } catch (IOException exception) {
+                Log.e(TAG, "Error loading " + nextImage, exception);
 
-        Collections.shuffle(fileNameList); // shuffle file names
-
-        // put the correct answer at the end of fileNameList
-        int correct = fileNameList.indexOf(correctAnswer);
-        fileNameList.add(fileNameList.remove(correct));
-
-        // add 2, 4, 6 or 8 guess Buttons based on the value of guessRows
-        for (int row = 0; row < guessRows; row++) {
-            // place Buttons in currentTableRow
-            for (int column = 0;
-                 column < guessLinearLayouts[row].getChildCount();
-                 column++) {
-                // get reference to Button to configure
-                Button newGuessButton =
-                        (Button) guessLinearLayouts[row].getChildAt(column);
-                newGuessButton.setEnabled(true);
-
-                // get country name and set it as newGuessButton's text
-                String filename = fileNameList.get((row * 2) + column);
-                newGuessButton.setText(getFoodName(filename));
             }
-        }
 
-        // randomly replace one Button with the correct answer
-        int row = random.nextInt(guessRows); // pick random row
-        int column = random.nextInt(2); // pick random column
-        LinearLayout randomRow = guessLinearLayouts[row]; // get the row
-        String countryName = getFoodName(correctAnswer);
-        ((Button) randomRow.getChildAt(column)).setText(countryName);
+            Collections.shuffle(fileNameList); // shuffle file names
+
+            // put the correct answer at the end of fileNameList
+            int correct = fileNameList.indexOf(correctAnswer);
+            fileNameList.add(fileNameList.remove(correct));
+            System.out.println(fileNameList);
+            // add 2, 4, 6 or 8 guess Buttons based on the value of guessRows
+            for (int row = 0; row < guessRows; row++) {
+                // place Buttons in currentTableRow
+                for (int column = 0;
+                     column < guessLinearLayouts[row].getChildCount();
+                     column++) {
+                    // get reference to Button to configure
+                    Button newGuessButton =
+                            (Button) guessLinearLayouts[row].getChildAt(column);
+                    newGuessButton.setEnabled(true);
+
+                    // get country name and set it as newGuessButton's text
+                    String filename = fileNameList.get((row * 2) + column);
+                    newGuessButton.setText(getFoodName(filename));
+                }
+            }
+
+            // randomly replace one Button with the correct answer
+            int row = random.nextInt(guessRows); // pick random row
+            int column = random.nextInt(2); // pick random column
+            LinearLayout randomRow = guessLinearLayouts[row]; // get the row
+            String countryName = getFoodName(correctAnswer);
+            ((Button) randomRow.getChildAt(column)).setText(countryName);
+        }
     }
     private void calculate() {
 
@@ -460,6 +525,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    private OnClickListener ResetListener =new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            System.out.println("asdfghjkl");
+            Quiz.setVisibility(View.VISIBLE);
+            Reset.setVisibility(View.INVISIBLE);
+            resetQuiz();
+        }};
     private OnClickListener guessButtonListener = new OnClickListener() {
         @Override
         public void onClick(View v) {

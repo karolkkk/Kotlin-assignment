@@ -26,7 +26,7 @@
     <string name="correct_answer">correct!</string>
     <string name="reset_quiz">Reset quiz</string>
     <string name="results">%1$d guesses, %2$.02f%% correct</string>
-
+    <string name="title_chart">Chart</string>
 
 
 </resources>
