@@ -467,44 +467,32 @@ public class MainActivity extends AppCompatActivity {
             String guess = guessButton.getText().toString();
             String answer = getFoodName(correctAnswer);
             ++totalGuesses; // increment number of guesses the user has made
+            if (guess.equals(answer)) { // if the guess is correct
+                ++correctAnswers; // increment the number of correct answers
 
-            // if the user has correctly identified FLAGS_IN_QUIZ flags
-            if (correctAnswers == FLAGS_IN_QUIZ) {
-                // DialogFragment to display quiz stats and start new quiz
-                DialogFragment quizResults =
-                        new DialogFragment() {
-                            // create an AlertDialog and return it
-                            @Override
-                            public Dialog onCreateDialog(Bundle bundle) {
-                                AlertDialog.Builder builder =
-                                        new AlertDialog.Builder(getActivity());
-                                builder.setMessage(
-                                        getString(R.string.results,
-                                                totalGuesses,
-                                                (1000 / (double) totalGuesses)));
+                // display correct answer in green text
+                answerTextView.setText(answer + "!");
 
-                                // "Reset Quiz" Button
-                                builder.setPositiveButton(R.string.reset_quiz,
-                                        new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog,
-                                                                int id) {
-                                                resetQuiz();
-                                            }
-                                        }
-                                );
 
-                                return builder.create(); // return the AlertDialog
-                            }
-                        };
+                disableButtons(); // disable all guess Buttons
+                loadNextFlag();
 
-                // use FragmentManager to display the DialogFragment
-                quizResults.setCancelable(false);
-                //quizResults.show(getFragmentManager(), "quiz results");
-            } else { // answer was incorrect
+                if (correctAnswers == FLAGS_IN_QUIZ) {
+                    disableButtons();
+                    answerTextView.setText(getResources().getString(R.string.results));
+                    //loadNextFlag();
+
+            } else { // answer is correct but quiz is not over
+               // loadNextFlag();
+                answerTextView.setText(R.string.correct_answer);
+            }
+        }
+            else { // answer was incorrect
 
                 // display "Incorrect!" in red
                 answerTextView.setText(R.string.incorrect_answer);
                 guessButton.setEnabled(false); // disable incorrect answer
+               // loadNextFlag();
             }
         }
     };

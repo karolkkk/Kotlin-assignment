@@ -10,119 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86f8d35b-635f-434a-ac67-f3d8f01d6ed8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Afghanistan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Armenia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Azerbaijan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Bahrain.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Bangladesh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Bhutan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Brunei.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Cambodia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-China.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Christmas_Island.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Georgia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Hong_Kong.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-India.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Indonesia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Iran.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Iraq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Israel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Japan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Jordan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Kazakhstan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Kuwait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Kyrgyzstan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Laos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Lebanon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Macao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Malaysia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Maldives.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Mongolia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Myanmar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Nepal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-North_Korea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Oman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Pakistan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Philippines.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Qatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Saudi_Arabia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Singapore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-South_Georgia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-South_Korea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Sri_Lanka.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Syria.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Taiwan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Tajikistan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Thailand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Tibet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Timor-Leste.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Turkey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Turkmenistan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-UAE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Uzbekistan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Vietnam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/Asia/Asia-Yemen.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Algeria.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Angola.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Benin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Botswana.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Burkina_Faso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Burundi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Cameroon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Cape_Verde.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Central_African_Republic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Chad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Comoros.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Dem._Rep._of_the_Congo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Djibouti.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Egypt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Eq._Guinea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Eritrea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Ethiopia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Gabon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Gambia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Ghana.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Guinea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Guinea_Bissau.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Ivory_Coast.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Kenya.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Lesotho.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Liberia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Libya.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Madagascar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Malawi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Mali.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Mauritania.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Mauritius.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Morocco.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Mozambique.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Namibia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Niger.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Nigeria.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Republic_of_the_Congo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Rwanda.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Sao_Tome.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Senegal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Seychelles.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Sierra_Leone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Somalia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-South_Africa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Sudan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Swaziland.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Tanzania.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Togo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Tunisia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Uganda.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Zambia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/Africa/Africa-Zimbabwe.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bottomnav/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bottomnav/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
@@ -159,17 +55,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bottomnav/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="474" column="42" lean-forward="true" selection-start-line="474" selection-start-column="42" selection-end-line="474" selection-end-column="42" />
+            <state relative-caret-position="238">
+              <caret line="482" column="35" selection-start-line="482" selection-start-column="35" selection-end-line="482" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#9985#10067#0" expanded="true" />
-                <element signature="e#17019#19376#0" expanded="true" />
-                <element signature="e#18044#18213#0" expanded="true" />
-                <element signature="e#18330#18349#0" expanded="true" />
-                <element signature="e#18915#18916#0" expanded="true" />
-                <element signature="e#19811#19836#0" expanded="true" />
-                <element signature="e#19375#19376#0" expanded="true" />
+                <element signature="e#9900#9982#0" expanded="true" />
+                <element signature="e#17019#20048#0" expanded="true" />
+                <element signature="e#17788#17830#0" expanded="true" />
+                <element signature="e#19702#19725#0" expanded="true" />
+                <element signature="e#19882#19907#0" expanded="true" />
+                <element signature="e#20047#20048#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+            <state relative-caret-position="288">
+              <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -233,6 +128,7 @@
       <find>quizCountriesList</find>
       <find>quizCountriesList</find>
       <find>guessRows</find>
+      <find>answer was</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -442,14 +338,14 @@
       <window_info id="Resources Explorer" order="7" weight="0.3295302" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Find" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.61275166" weight="0.6643059" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.6114094" weight="0.41501418" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.592068" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49798658" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.3872483" side_tool="true" visible="true" weight="0.3201133" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49731544" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.3885906" side_tool="true" visible="true" weight="0.4858357" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49731544" weight="0.4858357" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4966443" weight="0.4858357" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.3286119" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -527,24 +423,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+        <state relative-caret-position="288">
+          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bottomnav/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="474" column="42" lean-forward="true" selection-start-line="474" selection-start-column="42" selection-end-line="474" selection-end-column="42" />
+        <state relative-caret-position="238">
+          <caret line="482" column="35" selection-start-line="482" selection-start-column="35" selection-end-line="482" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9985#10067#0" expanded="true" />
-            <element signature="e#17019#19376#0" expanded="true" />
-            <element signature="e#18044#18213#0" expanded="true" />
-            <element signature="e#18330#18349#0" expanded="true" />
-            <element signature="e#18915#18916#0" expanded="true" />
-            <element signature="e#19811#19836#0" expanded="true" />
-            <element signature="e#19375#19376#0" expanded="true" />
+            <element signature="e#9900#9982#0" expanded="true" />
+            <element signature="e#17019#20048#0" expanded="true" />
+            <element signature="e#17788#17830#0" expanded="true" />
+            <element signature="e#19702#19725#0" expanded="true" />
+            <element signature="e#19882#19907#0" expanded="true" />
+            <element signature="e#20047#20048#0" expanded="true" />
           </folding>
         </state>
       </provider>

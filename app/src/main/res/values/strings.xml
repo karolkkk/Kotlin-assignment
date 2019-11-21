@@ -23,6 +23,7 @@
     <string name="Button2">Not so bad</string>
     <string name="Button3">Poison</string>
     <string name="incorrect_answer">Incorrect!</string>
+    <string name="correct_answer">correct!</string>
     <string name="reset_quiz">Reset quiz</string>
     <string name="results">%1$d guesses, %2$.02f%% correct</string>
 
